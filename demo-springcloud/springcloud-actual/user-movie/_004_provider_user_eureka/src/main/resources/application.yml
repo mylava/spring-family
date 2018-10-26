@@ -1,0 +1,63 @@
+#端口号
+server:
+  port: 8079
+  servlet:
+    path: /
+spring:
+  #服务名称
+  application:
+    #下划线开头的 application name 解析时候有问题，改为字母开头
+    name: cloud_004_provider_user_eureka
+  #jpa配置
+  jpa:
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  #数据源
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/user_movie?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    initialSize: 100
+    minIdle: 500
+    maxActive: 1000
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    #配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+    filters: stat,wall,log4j
+    maxPoolPreparedStatementPerConnectionSize: 20
+    useGlobalDataSourceStat: true
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+#log配置
+logging:
+  level:
+    root: info
+    org.hibernate: info
+    org.hibernate.type.descriptor.sql.BasicBinder: trace
+    org.hibernate.type.descriptor.sql.BasicExtractor: trace
+    cn.mylava: debug
+eureka:
+  client:
+    # EurekaClientAutoConfiguration
+    prefer-ip-address: true
+    service-url:
+      defaultZone: http://admin:admin@${eureka.instance.hostname}:8761/eureka
+    #EurekaDiscoveryClientConfiguration类中定义
+    healthcheck:
+      enabled: true
+  instance:
+    hostname: localhost
+    # 默认为 ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${server.port}}
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+    statusPageUrlPath: ${server.servlet.path}/info
+    healthCheckUrlPath: ${server.servlet.path}/health
+    homePageUrl: ${eureka.hostname}/

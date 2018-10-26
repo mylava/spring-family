@@ -1,0 +1,26 @@
+#端口号
+server:
+  port: 8080
+spring:
+  #服务名称
+  application:
+    name: _001_provider_user
+  #jpa配置
+  jpa:
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  #数据源配置
+  datasource:
+    platform: h2
+    schema: classpath:schema.sql
+    data: classpath:data.sql
+#log配置
+logging:
+  level:
+    root: info
+    org.hibernate: info
+    org.hibernate.type.descriptor.sql.BasicBinder: trace
+    org.hibernate.type.descriptor.sql.BasicExtractor: trace
+    cn.mylava: debug

@@ -1,0 +1,69 @@
+spring:
+  #thymeleaf
+  thymeleaf:
+    cache: false
+    enabled: true
+    encoding: utf-8
+    servlet:
+      content-type: text/html
+    mode: HTML5
+    prefix: classpath:/templates/
+    suffix: .html
+  #数据源
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/seckill?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    initialSize: 100
+    minIdle: 500
+    maxActive: 1000
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    #配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+    filters: stat,wall,log4j
+    maxPoolPreparedStatementPerConnectionSize: 20
+    useGlobalDataSourceStat: true
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+  #redis
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    timeout: 10
+    #redis连接池配置
+    jedis:
+      pool:
+        max-idle: 500
+        max-wait: 500
+        max-active: 1000
+#  activemq配置
+  activemq:
+    broker-url: http://192.168.159.186:5672
+    user: guest
+    password: guest
+    
+
+#mybatis
+mybatis:
+  type-aliases-package: cn.mylava.seckill.bean
+  configuration:
+    map-underscore-to-camel-case: true #下划线映射为驼峰命名
+    default-fetch-size: 100
+    default-statement-timeout: 3000
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:mybatis/mapper/*.xml
+logging:
+  config:
+#logging:
+#  level: debug cn.mylava.seckill.dao
+
+
+
+

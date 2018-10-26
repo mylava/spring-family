@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: _002_consumer_movie
+server:
+  port: 8081
+user:
+  userServicePath: http://localhost:8080/user/
