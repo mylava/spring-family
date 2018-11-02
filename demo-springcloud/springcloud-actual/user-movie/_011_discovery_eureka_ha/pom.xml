@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>user-movie</artifactId>
+        <groupId>cn.mylava</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>_011_discovery_eureka_ha</artifactId>
+
+    <name>${project.artifactId}</name>
+    <description>
+        eureka服务发现
+        本节添加功能：eureka 高可用
+    </description>
+
+    <dependencies>
+        <!--===== Finchley.BUILD-SNAPSHOT版本 =====-->
+        <!--spring-cloud eureka-->
+        <!--<dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+        </dependency>-->
+        <!--spring-cloud security,为服务访问添加权限管理-->
+        <!--<dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-security</artifactId>
+        </dependency>
+-->
+        <!--===== Camden.BUILD-SNAPSHOT版本 =====-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka-server</artifactId>
+        </dependency>
+        <!--<dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-security</artifactId>
+        </dependency>-->
+
+
+
+    </dependencies>
+
+</project>

@@ -1,18 +1,21 @@
 spring:
   application:
-    name: _005_consumer_movie_eureka
+    name: 005-consumer-movie-eureka
 server:
   port: 8081
   servlet:
     path: /
 user:
   #注意这里的路径为eureka中查询到的服务提供路径
-  userServicePath: http://localhost:8080/user/
+  userServicePath: http://localhost:8079/user/
 eureka:
   client:
     # EurekaClientAutoConfiguration
     prefer-ip-address: true
-    service-url:
+    #spring boot 2.0之后的属性名
+#    service-url:
+    #spring boot 2.0之前的属性名
+    serviceUrl:
       defaultZone: http://admin:admin@${eureka.instance.hostname}:8761/eureka
     #EurekaDiscoveryClientConfiguration类中定义
     healthcheck:

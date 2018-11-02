@@ -7,10 +7,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * 简单电影微服务类
- * 1、启动 _001_provider_user 模块服务
- * 2、启动 _002_consumer_movie 模块服务
- * 3、在浏览器输入地址 http://localhost:8081/movie/1 可以看到信息成功的被打印出来；
+ * Eureka电影微服务类
+ * 1、启动 _003_discovery_eureka
+ * 2、启动 _004_provider_user_eureka 模块服务
+ * 3、启动 _005_consumer_movie_eureka 模块服务
+ * 4、在浏览器输入地址 http://localhost:8081/movie/1 可以看到信息成功的被打印出来；
  */
 @EnableEurekaClient
 @SpringBootApplication

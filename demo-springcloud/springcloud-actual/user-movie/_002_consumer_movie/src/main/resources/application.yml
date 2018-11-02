@@ -1,6 +1,6 @@
 spring:
   application:
-    name: _002_consumer_movie
+    name: 002-consumer-movie
 server:
   port: 8081
 user:

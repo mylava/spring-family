@@ -1,0 +1,4 @@
+cn/mylava/ConsumerMovieFeignApplication.class
+cn/mylava/controller/MovieController.class
+cn/mylava/UserFacadeClient.class
+cn/mylava/domain/User.class

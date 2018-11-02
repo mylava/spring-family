@@ -6,8 +6,8 @@ server:
 spring:
   #服务名称
   application:
-    #下划线开头的 application name 解析时候有问题，改为字母开头
-    name: cloud_004_provider_user_eureka
+    #使用ribbon的时候，name不能有下划线
+    name: 004-provider-user-eureka
   #jpa配置
   jpa:
     generate-ddl: false
@@ -49,7 +49,10 @@ eureka:
   client:
     # EurekaClientAutoConfiguration
     prefer-ip-address: true
-    service-url:
+    #spring boot 2.0之后的属性名
+#    service-url:
+    #spring boot 2.0之前的属性名
+    serviceUrl:
       defaultZone: http://admin:admin@${eureka.instance.hostname}:8761/eureka
     #EurekaDiscoveryClientConfiguration类中定义
     healthcheck:
@@ -60,4 +63,4 @@ eureka:
     instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
     statusPageUrlPath: ${server.servlet.path}/info
     healthCheckUrlPath: ${server.servlet.path}/health
-    homePageUrl: ${eureka.hostname}/
+    homePageUrl: ${eureka.instance.hostname}/

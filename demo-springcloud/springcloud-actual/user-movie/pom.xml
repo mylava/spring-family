@@ -21,6 +21,11 @@
         <module>_004_provider_user_eureka</module>
         <module>_005_consumer_movie_eureka</module>
         <module>_006_consumer_movie_eureka_ribbon</module>
+        <module>_007_consumer_movie_eureka_ribbon_yml</module>
+        <module>_008_consumer_movie_ribbone_without_ureka</module>
+        <module>_009_consumer_movie_feign</module>
+        <module>_010_consumer_movie_feign_custom</module>
+        <module>_011_discovery_eureka_ha</module>
     </modules>
 
 

@@ -24,7 +24,10 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>Finchley.SR1</version>
+                <!--官方demo使用的版本-->
+                <version>Camden.SR2</version>
+                <!--2018-11-01最新版按照官方文档启动失败-->
+                <!--<version>Finchley.SR2</version>-->
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -39,4 +42,16 @@
             </plugin>
         </plugins>
     </build>
+
+  <!--  <repositories>
+        <repository>
+            <id>spring-snapshots</id>
+            <name>Spring Snapshots</name>
+            <url>https://repo.spring.io/libs-snapshot</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>-->
+
 </project>

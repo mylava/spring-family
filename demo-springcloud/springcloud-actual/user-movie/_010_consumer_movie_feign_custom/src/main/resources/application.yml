@@ -1,0 +1,49 @@
+spring:
+  application:
+    name: 010-consumer-movie-feign-custom
+server:
+  port: 8081
+  servlet:
+      path: /
+eureka:
+  client:
+      # EurekaClientAutoConfiguration
+    prefer-ip-address: true
+    #spring boot 2.0之后的属性名
+#    service-url:
+    #spring boot 2.0之前的属性名
+    serviceUrl:
+      defaultZone: http://admin:admin@${eureka.instance.hostname}:8761/eureka
+    #EurekaDiscoveryClientConfiguration类中定义
+    healthcheck:
+      enabled: true
+  instance:
+    hostname: ${java.rmi.server.hostname}
+    # 默认为 ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${server.port}}
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+    statusPageUrlPath: ${server.servlet.path}/info
+    healthCheckUrlPath: ${server.servlet.path}/health
+    homePageUrl: ${eureka.instance.hostname}/
+logging:
+  level:
+    root: info
+    org.springframework: debug
+    cn.mylava: debug
+    #这个日志级别设置没有用，需要单独在FeignConfiguration中设置日志级别
+#    cn.mylava.facade: debug
+#解决hystrix首次访问超时的问题
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        timeout:
+#          # 方案一，禁用hystrix超时
+#          enabled: false
+#        isolation:
+#          thread:
+#            #方案二，hystrix超时时间5秒
+#            timeoutInMilliseconds: 5000
+#方案三，禁用hystrix
+feign:
+  hystrix:
+    enabled: false

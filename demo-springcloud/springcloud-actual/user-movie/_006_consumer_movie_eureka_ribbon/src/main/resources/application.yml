@@ -1,6 +1,6 @@
 spring:
   application:
-    name: _006_consumer_movie_eureka_ribbon
+    name: 006-consumer-movie-eureka-ribbon
 server:
   port: 8081
   servlet:
@@ -12,7 +12,10 @@ eureka:
   client:
     # EurekaClientAutoConfiguration
     prefer-ip-address: true
-    service-url:
+    #spring boot 2.0之后的属性名
+#    service-url:
+    #spring boot 2.0之前的属性名
+    serviceUrl:
       defaultZone: http://admin:admin@${eureka.instance.hostname}:8761/eureka
     #EurekaDiscoveryClientConfiguration类中定义
     healthcheck:
@@ -23,4 +26,4 @@ eureka:
     instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
     statusPageUrlPath: ${server.servlet.path}/info
     healthCheckUrlPath: ${server.servlet.path}/health
-    homePageUrl: ${eureka.hostname}/
+    homePageUrl: ${eureka.instance.hostname}/

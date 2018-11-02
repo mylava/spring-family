@@ -15,16 +15,30 @@
     <description>eureka服务发现</description>
 
     <dependencies>
+        <!--===== Finchley.BUILD-SNAPSHOT版本 =====-->
         <!--spring-cloud eureka-->
-        <dependency>
+        <!--<dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
-        </dependency>
+        </dependency>-->
         <!--spring-cloud security,为服务访问添加权限管理-->
+        <!--<dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-security</artifactId>
+        </dependency>
+-->
+        <!--===== Camden.BUILD-SNAPSHOT版本 =====-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka-server</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-security</artifactId>
         </dependency>
+
+
+
     </dependencies>
 
 </project>

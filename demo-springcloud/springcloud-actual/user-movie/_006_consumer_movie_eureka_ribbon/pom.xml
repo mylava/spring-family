@@ -29,15 +29,26 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <!--eureka-client-->
+        <!--spring boot 2.0之前的eureka依赖-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <artifactId>spring-cloud-starter-eureka</artifactId>
         </dependency>
+        <!--spring boot 2.0之后的eureka依赖-->
+        <!--<dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>-->
         <!--spring-boot actuator,eureka心跳检测依赖-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
+        <!--spring-cloud ribbon spring boot 2.0之后需要手动引入-->
+        <!--<dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-netflix-ribbon</artifactId>
+        </dependency>-->
     </dependencies>
 
 </project>

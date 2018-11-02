@@ -4,7 +4,7 @@ server:
 spring:
   #服务名称
   application:
-    name: _001_provider_user
+    name: 001-provider-user
   #jpa配置
   jpa:
     generate-ddl: false
