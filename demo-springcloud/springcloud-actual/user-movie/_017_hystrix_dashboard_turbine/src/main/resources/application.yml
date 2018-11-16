@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: 017-hystrix-trubine
+server:
+  port: 8031
+  servlet:
+      path: /
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:admin@${eureka.instance.hostname}:8761/eureka
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.ipAddress:${server.port}}
+#    statusPageUrlPath: ${server.servlet.path}/info
+#    healthCheckUrlPath: ${server.servlet.path}/health
+#    homePageUrl: ${eureka.hostname}/
+
+turbine:
+  aggregator:
+    clusterConfig: 012-CONSUMER-MOVIE-HYSTRIX
+  appConfig: 012-consumer-movie-hystrix

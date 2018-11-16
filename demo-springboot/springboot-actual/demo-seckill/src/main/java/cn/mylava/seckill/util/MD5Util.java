@@ -33,11 +33,11 @@ public class MD5Util {
         return MD5Form(MD5Input(inputPass), salt);
     }
 
-     public static void main(String[] args) {
+  /*   public static void main(String[] args) {
 
          System.out.println(MD5Input("123456"));
          System.out.println("c8210e78361a27157ac2dc309e6cabf8");
          System.out.println(MD5Form("c8210e78361a27157ac2dc309e6cabf8",salt));
          System.out.println(MD5DB("123456", salt));
-    }
+    }*/
 }

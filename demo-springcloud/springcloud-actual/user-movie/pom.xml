@@ -26,7 +26,17 @@
         <module>_009_consumer_movie_feign</module>
         <module>_010_consumer_movie_feign_custom</module>
         <module>_011_discovery_eureka_ha</module>
+        <module>_012_consumer_movie_hystrix</module>
+        <module>_013_consumer_movie_hystrix_propagation</module>
+        <module>_014_consumer_movie_hystrix_particle</module>
+        <module>_015_consumer_movie_hystrix_fallbackfactory</module>
+        <module>_016_hystrix_dashboard</module>
+        <module>_017_hystrix_dashboard_turbine</module>
+        <module>_018_gateway_zuul</module>
+        <module>_019_gateway_zuul_regex</module>
+        <module>_020_gateway_zuul_fallback</module>
+        <module>_021_gateway_zuul_sidecar</module>
+        <module>_022_gateway_zuul_filter</module>
+        <module>_023_config_server</module>
     </modules>
-
-
 </project>

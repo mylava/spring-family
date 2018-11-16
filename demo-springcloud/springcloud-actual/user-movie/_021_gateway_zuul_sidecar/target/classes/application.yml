@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: 021-gateway-zuul-sidecar
+#日志
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+#web服务端口
+server:
+  port: 8070
+#eureka配置
+eureka:
+  # 修改 http://localhost:8761 地址 Eureka 首页上面 System Status 的 Data center 显示信息
+  datacenter: SpringCloud
+  # 修改 http://localhost:8761 地址 Eureka 首页上面 System Status 的 Environment 显示信息
+  environment: Test
+  instance:
+    # ${HOSTNAME} 是系统变量，也可以直接使用localhost指定
+    hostname: ${java.rmi.server.hostname}
+    # 服务向eureka注册时使用IP 而不是 hostname
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+  client:
+    service-url:
+      #设置与Eureka Server交互的地址，查询服务和注册服务都需要依赖这个地址。默认是http://localhost:8761/eureka ；多个地址可使用 , 分隔。
+      defaultZone: http://admin:admin@localhost:8761/eureka
+zuul:
+  routes:
+    abc:
+      path: /userService/**
+      serviceId: 004-provider-user-eureka
+sidecar:
+  #非JVM语言程序监听的端口
+  port: 8060
+  #健康指标的地址
+  health-uri: http://localhost:8060/health.json

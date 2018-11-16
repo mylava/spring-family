@@ -1,4 +1,4 @@
 /Users/lipengfei/Documents/code/mycode/spring-family/demo-springcloud/springcloud-actual/user-movie/_009_consumer_movie_feign/src/main/java/cn/mylava/domain/User.java
-/Users/lipengfei/Documents/code/mycode/spring-family/demo-springcloud/springcloud-actual/user-movie/_009_consumer_movie_feign/src/main/java/cn/mylava/UserFacadeClient.java
 /Users/lipengfei/Documents/code/mycode/spring-family/demo-springcloud/springcloud-actual/user-movie/_009_consumer_movie_feign/src/main/java/cn/mylava/ConsumerMovieFeignApplication.java
 /Users/lipengfei/Documents/code/mycode/spring-family/demo-springcloud/springcloud-actual/user-movie/_009_consumer_movie_feign/src/main/java/cn/mylava/controller/MovieController.java
+/Users/lipengfei/Documents/code/mycode/spring-family/demo-springcloud/springcloud-actual/user-movie/_009_consumer_movie_feign/src/main/java/cn/mylava/facade/UserFacadeClient.java

@@ -1,0 +1,5 @@
+cn/mylava/facade/UserFacadeClient.class
+cn/mylava/controller/MovieController.class
+cn/mylava/ConsumerMovieHystrixPropagationApplication.class
+cn/mylava/facade/UseracadeFallback.class
+cn/mylava/domain/User.class

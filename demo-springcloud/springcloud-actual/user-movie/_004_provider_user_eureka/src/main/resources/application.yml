@@ -47,14 +47,14 @@ logging:
     cn.mylava: debug
 eureka:
   client:
-    # EurekaClientAutoConfiguration
-    prefer-ip-address: true
+    # EurekaClientAutoConfiguration spring boot 2.0之后的属性名
+#    prefer-ip-address: true
     #spring boot 2.0之后的属性名
 #    service-url:
     #spring boot 2.0之前的属性名
     serviceUrl:
       defaultZone: http://admin:admin@${eureka.instance.hostname}:8761/eureka
-    #EurekaDiscoveryClientConfiguration类中定义
+    #EurekaDiscoveryClientConfiguration 类中定义
     healthcheck:
       enabled: true
   instance:
@@ -64,3 +64,4 @@ eureka:
     statusPageUrlPath: ${server.servlet.path}/info
     healthCheckUrlPath: ${server.servlet.path}/health
     homePageUrl: ${eureka.instance.hostname}/
+    prefer-ip-address: true

@@ -1,0 +1,9 @@
+cn/mylava/facade/fallback/UserFacadeFallback.class
+cn/mylava/controller/MovieController.class
+config/TestFacadeConfiguration.class
+cn/mylava/facade/TestFacade.class
+cn/mylava/domain/User.class
+cn/mylava/facade/UserFacade.class
+cn/mylava/ConsumerMovieHystrixParticleApplication.class
+cn/mylava/facade/fallback/TestFacadeFallback.class
+config/UserFacadeConfiguration.class

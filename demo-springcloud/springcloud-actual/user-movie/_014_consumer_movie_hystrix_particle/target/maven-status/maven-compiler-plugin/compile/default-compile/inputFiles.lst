@@ -1,0 +1,9 @@
+/Users/lipengfei/Documents/code/mycode/spring-family/demo-springcloud/springcloud-actual/user-movie/_014_consumer_movie_hystrix_particle/src/main/java/cn/mylava/domain/User.java
+/Users/lipengfei/Documents/code/mycode/spring-family/demo-springcloud/springcloud-actual/user-movie/_014_consumer_movie_hystrix_particle/src/main/java/cn/mylava/facade/fallback/TestFacadeFallback.java
+/Users/lipengfei/Documents/code/mycode/spring-family/demo-springcloud/springcloud-actual/user-movie/_014_consumer_movie_hystrix_particle/src/main/java/config/UserFacadeConfiguration.java
+/Users/lipengfei/Documents/code/mycode/spring-family/demo-springcloud/springcloud-actual/user-movie/_014_consumer_movie_hystrix_particle/src/main/java/cn/mylava/facade/TestFacade.java
+/Users/lipengfei/Documents/code/mycode/spring-family/demo-springcloud/springcloud-actual/user-movie/_014_consumer_movie_hystrix_particle/src/main/java/cn/mylava/ConsumerMovieHystrixParticleApplication.java
+/Users/lipengfei/Documents/code/mycode/spring-family/demo-springcloud/springcloud-actual/user-movie/_014_consumer_movie_hystrix_particle/src/main/java/cn/mylava/facade/fallback/UserFacadeFallback.java
+/Users/lipengfei/Documents/code/mycode/spring-family/demo-springcloud/springcloud-actual/user-movie/_014_consumer_movie_hystrix_particle/src/main/java/cn/mylava/controller/MovieController.java
+/Users/lipengfei/Documents/code/mycode/spring-family/demo-springcloud/springcloud-actual/user-movie/_014_consumer_movie_hystrix_particle/src/main/java/config/TestFacadeConfiguration.java
+/Users/lipengfei/Documents/code/mycode/spring-family/demo-springcloud/springcloud-actual/user-movie/_014_consumer_movie_hystrix_particle/src/main/java/cn/mylava/facade/UserFacade.java

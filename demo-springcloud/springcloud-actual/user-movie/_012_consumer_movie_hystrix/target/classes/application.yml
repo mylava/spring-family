@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: 012-consumer-movie-hystrix
+server:
+  port: 8081
+  servlet:
+      path: /
+eureka:
+  client:
+    # EurekaClientAutoConfiguration spring boot 2.0之后的属性名
+#    prefer-ip-address: true
+    #spring boot 2.0之后的属性名
+#    service-url:
+    #spring boot 2.0之前的属性名
+    serviceUrl:
+      defaultZone: http://admin:admin@${eureka.instance.hostname}:8761/eureka
+    #EurekaDiscoveryClientConfiguration 类中定义
+    healthcheck:
+      enabled: true
+  instance:
+    hostname: localhost
+    # 默认为 ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${server.port}}
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+    statusPageUrlPath: ${server.servlet.path}/info
+    healthCheckUrlPath: ${server.servlet.path}/health
+    homePageUrl: ${eureka.hostname}/
+    prefer-ip-address: true
+logging:
+  level:
+    root: info
+    org.springframework: debug
+    cn.mylava: debug

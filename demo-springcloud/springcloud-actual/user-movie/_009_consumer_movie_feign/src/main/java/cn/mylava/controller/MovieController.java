@@ -1,6 +1,6 @@
 package cn.mylava.controller;
 
-import cn.mylava.UserFacadeClient;
+import cn.mylava.facade.UserFacadeClient;
 import cn.mylava.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;

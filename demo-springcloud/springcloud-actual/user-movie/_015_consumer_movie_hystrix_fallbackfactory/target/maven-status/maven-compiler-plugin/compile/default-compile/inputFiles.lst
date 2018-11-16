@@ -1,0 +1,5 @@
+/Users/lipengfei/Documents/code/mycode/spring-family/demo-springcloud/springcloud-actual/user-movie/_015_consumer_movie_hystrix_fallbackfactory/src/main/java/cn/mylava/facade/fallback/UserFacadeFallbackFactory.java
+/Users/lipengfei/Documents/code/mycode/spring-family/demo-springcloud/springcloud-actual/user-movie/_015_consumer_movie_hystrix_fallbackfactory/src/main/java/cn/mylava/facade/UserFacadeClient.java
+/Users/lipengfei/Documents/code/mycode/spring-family/demo-springcloud/springcloud-actual/user-movie/_015_consumer_movie_hystrix_fallbackfactory/src/main/java/cn/mylava/controller/MovieController.java
+/Users/lipengfei/Documents/code/mycode/spring-family/demo-springcloud/springcloud-actual/user-movie/_015_consumer_movie_hystrix_fallbackfactory/src/main/java/cn/mylava/ConsumerMovieHystrixFallbackFactoryApplication.java
+/Users/lipengfei/Documents/code/mycode/spring-family/demo-springcloud/springcloud-actual/user-movie/_015_consumer_movie_hystrix_fallbackfactory/src/main/java/cn/mylava/domain/User.java

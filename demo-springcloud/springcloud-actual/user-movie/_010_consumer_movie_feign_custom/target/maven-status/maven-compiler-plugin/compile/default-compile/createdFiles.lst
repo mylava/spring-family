@@ -1,0 +1,7 @@
+cn/mylava/controller/MovieController.class
+config/TestFacadeConfiguration.class
+cn/mylava/facade/TestFacade.class
+cn/mylava/domain/User.class
+cn/mylava/facade/UserFacade.class
+config/UserFacadeConfiguration.class
+cn/mylava/ConsumerMovieFeignCustomApplication.class

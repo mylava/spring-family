@@ -7,14 +7,14 @@ server:
       path: /
 eureka:
   client:
-      # EurekaClientAutoConfiguration
+      # EurekaClientAutoConfiguration spring boot 2.0之后的属性名
     prefer-ip-address: true
     #spring boot 2.0之后的属性名
 #    service-url:
     #spring boot 2.0之前的属性名
     serviceUrl:
       defaultZone: http://admin:admin@${eureka.instance.hostname}:8761/eureka
-    #EurekaDiscoveryClientConfiguration类中定义
+    #EurekaDiscoveryClientConfiguration 类中定义
     healthcheck:
       enabled: true
   instance:
@@ -24,9 +24,27 @@ eureka:
     statusPageUrlPath: ${server.servlet.path}/info
     healthCheckUrlPath: ${server.servlet.path}/health
     homePageUrl: ${eureka.instance.hostname}/
+    prefer-ip-address: true
 logging:
   level:
     root: info
     org.springframework: debug
     cn.mylava: debug
-    cn.mylava.facade: debug
+    #这个日志级别设置没有用，需要单独在FeignConfiguration中设置日志级别
+#    cn.mylava.facade: debug
+#解决hystrix首次访问超时的问题
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        timeout:
+#          # 方案一，禁用hystrix超时
+#          enabled: false
+#        isolation:
+#          thread:
+#            #方案二，hystrix超时时间5秒,默认时间为1秒
+#            timeoutInMilliseconds: 5000
+#方案三，禁用hystrix
+feign:
+  hystrix:
+    enabled: false

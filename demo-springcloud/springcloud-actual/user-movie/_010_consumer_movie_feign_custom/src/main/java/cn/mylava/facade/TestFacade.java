@@ -1,7 +1,7 @@
 package cn.mylava.facade;
 
 import cn.mylava.domain.User;
-import config.Configuration2;
+import config.TestFacadeConfiguration;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * @since: JDK 1.8
  * @description:
  */
-@FeignClient(name = "xxxx", url = "http://localhost:8761/", configuration = Configuration2.class)
+@FeignClient(name = "xxxx", url = "http://localhost:8761/", configuration = TestFacadeConfiguration.class)
 public interface TestFacade {
 
     @RequestMapping(value = "/eureka/apps/{serviceName}")
