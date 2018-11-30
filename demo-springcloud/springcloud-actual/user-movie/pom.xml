@@ -38,5 +38,6 @@
         <module>_021_gateway_zuul_sidecar</module>
         <module>_022_gateway_zuul_filter</module>
         <module>_023_config_server</module>
+        <module>_024_config_client</module>
     </modules>
 </project>

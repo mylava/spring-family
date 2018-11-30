@@ -1,0 +1,17 @@
+#web服务端口
+server:
+  port: 8901
+spring:
+  application:
+    name: 024-config-client
+  cloud:
+    config:
+      uri: http://localhost:8900
+      profile: prod
+      label: master #当config server的后端存储是git的时候，默认是master
+#日志
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG

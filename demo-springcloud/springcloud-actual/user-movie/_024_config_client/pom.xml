@@ -9,30 +9,32 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>_021_gateway_zuul_sidecar</artifactId>
+    <artifactId>_024_config_client</artifactId>
 
     <name>${project.artifactId}</name>
     <description>
-        微服务网关
-        本节添加功能：添加 zuul sidecar
+        微服务统一配置客户端
     </description>
 
     <dependencies>
-        <!--spring-cloud 网关 zuul-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-netflix-sidecar</artifactId>
-        </dependency>
-        <!--spring-cloud 服务发现客户端 eureka-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka</artifactId>
-        </dependency>
 
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-hystrix</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
+        <!--spring-cloud config-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
+
+        <!--lombok-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
     </dependencies>
 
 </project>
