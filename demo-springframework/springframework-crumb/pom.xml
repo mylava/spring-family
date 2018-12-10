@@ -10,12 +10,12 @@
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
 
-    <artifactId>springframework-crumbs</artifactId>
+    <artifactId>springframework-crumb</artifactId>
 
     <name>${project.artifactId}</name>
     <description>spring framework 基础知识</description>
     <modules>
-        <module>demo-spring</module>
+        <module>scope-spring</module>
     </modules>
 
 

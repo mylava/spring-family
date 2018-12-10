@@ -15,7 +15,7 @@
     <name>${project.artifactId}</name>
     <description>spring boot 示例</description>
     <modules>
-        <module>springboot-crumbs</module>
+        <module>springboot-crumb</module>
         <module>springboot-actual</module>
     </modules>
 </project>

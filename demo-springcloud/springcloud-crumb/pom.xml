@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
 
-    <artifactId>springcloud-crumbs</artifactId>
+    <artifactId>springcloud-crumb</artifactId>
 
     <name>${project.artifactId}</name>
     <description>spring cloud 基础知识</description>

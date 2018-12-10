@@ -15,7 +15,7 @@
     <name>${project.artifactId}</name>
     <description>spring cloud 示例</description>
     <modules>
-        <module>springcloud-crumbs</module>
+        <module>springcloud-crumb</module>
         <module>springcloud-actual</module>
     </modules>
 
